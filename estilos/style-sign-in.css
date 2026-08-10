@@ -35,6 +35,8 @@ div{
     background-color: transparent;
     border:  2px solid rgba(0, 0, 0, 0.329);
     box-shadow: 0px 0px 15px var(--cor2);
+    color: white;
+    text-align: center;
 }
 #ttemail{
     position: absolute;
@@ -44,9 +46,15 @@ div{
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     opacity: 40%;
+
 }
 input::placeholder{
     opacity: 0;
+}
+input:not(:placeholder-shown) + label{
+  transform: translate(0px, -30px);
+  transition: 0.5s;
+  opacity: 50%;
 }
 #Email:focus + label{
     transform: translate(0px, -30px);
@@ -64,6 +72,8 @@ input::placeholder{
     background-color: transparent;
     border: 2px solid rgba(0, 0, 0, 0.329);
     box-shadow: 0px 0px 15px var(--cor2);
+    color: white;
+    text-align: center;
 }
 #ttsenha{
     position: absolute;
