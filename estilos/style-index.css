@@ -1,65 +1,139 @@
-@charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Sekuya&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
 :root{
     --cor0: #00B8FC;
     --cor1: #009FD9;
     --cor2: #0081B0;
     --cor3: #006387;
     --cor4: #00455E;
-    --font-padrao: Arial, helvetica, sans-serif;
-    --font-destaque: "Sekuya", system-ui;
-}
-*{
-    margin: 0;
-    padding: 0;
 }
 body{
-    background-color: var(--cor2);
+    background-color: var(--cor4);
+    height: 100vh;
 }
-header{
-    height: 100px;
-    background-color: var(--cor0);
-    color: var(--cor4);
-    text-align: center;
-    font-family: var(--font-destaque);
-}
-nav{
-    background-color: var(--cor0);
-    padding: 10px;
-    text-align: center;
-    font-family: var(--font-padrao);
-    
-}
-nav > a{
-    text-decoration: none;
-    color: white;
-    padding: 10px;
-}
-nav > a:hover{
-    background-color: var(--cor1);
-    border-radius: 10px;
-    transition: 0.5s;
-    box-shadow: 0px 0px 20px white;
-}
-main{
-    background-color: white;
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    font-family: var(--font-padrao);
-    box-shadow: 3px 3px 20px;
-    line-height: 30px;
-}
-main h2{
-    padding: 2px;
-    background-image: linear-gradient(to right, var(--cor2), transparent);
-}
-main h3{
-    background-image: linear-gradient(to right, var(--cor2), transparent);
-    text-indent: 25px;
-}
-p{
-    text-indent: 50px;
-    
+div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 700px;
+    background-color: var(--cor3);
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px var(--cor1);
 }
 
+#Email{
+    position: absolute;
+    top: 38%;   
+    left: 24%;
+    width: 250px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: transparent;
+    border:  2px solid rgba(0, 0, 0, 0.329);
+    box-shadow: 0px 0px 15px var(--cor2);
+    color: white;
+    text-align: center;
+}
+#ttemail{
+    position: absolute;
+    top: 39.7%;
+    left: 27%;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 40%;
+
+}
+input::placeholder{
+    opacity: 0;
+}
+input:not(:placeholder-shown) + label{
+  transform: translate(0px, -30px);
+  transition: 0.5s;
+  opacity: 50%;
+}
+#Email:focus + label{
+    transform: translate(0px, -30px);
+    transition: 0.5s;
+    opacity: 100%;
+}
+
+#senha{
+    position: absolute;
+    top: 48%;
+    left: 24%;
+    width: 250px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.329);
+    box-shadow: 0px 0px 15px var(--cor2);
+    color: white;
+    text-align: center;
+}
+#ttsenha{
+    position: absolute;
+    top: 49.7%;
+    left: 27%;
+    color: white;
+    opacity: 40%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+#senha:focus + label{
+    transform: translate(0px, -35px);
+    transition: 0.5s;
+    opacity: 100%;
+}
+
+button{
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    background-color: var(--cor3);
+    border: none;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0px 0px 20px var(--cor2);
+}
+button:hover{
+    background-color: var(--cor2);
+    transition: 1s;
+}
+a#Cadastre{
+    position: absolute;
+    top: 69%;
+    left: 40%;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100px;
+    height: 21px;
+    padding-top: 3px;
+
+}
+a#esqueceuSenha{
+    position: absolute;
+    top: 75%;
+    left: 40%;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100px;
+    height: 36px;
+    padding-top: 3px;
+}
+a:hover{
+    background-color: var(--cor2);
+    transition: 0.5s;
+    border-radius: 10px;
+    text-decoration: underline;
+}

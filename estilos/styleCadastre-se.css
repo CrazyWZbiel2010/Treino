@@ -1,0 +1,57 @@
+:root{
+    --cor0: #00B8FC;
+    --cor1: #009FD9;
+    --cor2: #0081B0;
+    --cor3: #006387;
+    --cor4: #00455E;
+    --font-padrao: arial, helvetica, sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--cor4);
+}
+main{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 700px;
+    background-color: var(--cor3);
+    text-align: center;
+    border-radius: 15px;
+}
+main > h1{
+    font-family: var(--font-padrao);
+}
+
+input::placeholder{
+    opacity: 0%;
+}
+
+input{
+    height: 35px;
+    width: 250px;
+    border-radius: 20px;
+    background-color: var(--cor3);
+    border: 1px solid black;
+    box-shadow: 0 0 15px var(--cor1); 
+}
+
+#email{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#ttemail{
+    position: absolute;
+    top: 50%;
+    left: 32%;
+    transform: translate(-50%, -50%);
+    opacity: 50%;
+}
