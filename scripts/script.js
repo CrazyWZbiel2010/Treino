@@ -15,4 +15,3 @@ function entrar(){
         alert("Email ou senha invalidos")
     }
 }
-
