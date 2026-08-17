@@ -8,10 +8,14 @@
 </head>
 <body>
     <div>
-        <input type="email" id="Email" placeholder="email">
-        <label for="" id="ttemail">Email: </label>
-        <input type="password" id="senha" placeholder="Senha">
-        <label for="" id="ttsenha">Senha: </label>
+        <input type="email" id="Email" placeholder="email" required>
+        <label for="Email" id="ttemail">Email: </label>
+        <p id="aviso_1ºinput" class="aviso">&#x26A0 Email ou senha incorretos!</p>
+
+        <input type="password" id="senha" placeholder="Senha" required>
+        <label for="senha" id="ttsenha">Senha: </label>
+        <p id="aviso_2ºinput" class="aviso">&#x26A0 Email ou senha incorretos!</p>
+
         <button onclick="entrar()">Entrar</button>
         <a href="Cadastre-se.html" id="Cadastre">Cadastre-se</a>
         <a href="EsqueceuSenha.html" id="esqueceuSenha">Esqueceu a senha?</a>

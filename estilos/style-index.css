@@ -139,3 +139,17 @@ a:hover{
     border-radius: 10px;
     text-decoration: underline;
 }
+p{
+    color: red;
+    visibility: hidden;
+}
+p#aviso_1ºinput{
+    position: absolute;
+    top: 44%;
+    left: 25%;
+}
+p#aviso_2ºinput{
+    position: absolute;
+    top: 54%;
+    left: 25%;
+}
