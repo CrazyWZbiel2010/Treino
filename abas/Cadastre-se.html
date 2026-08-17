@@ -9,13 +9,13 @@
 <body>
     <main>
         <h1>Comece a usar o site mineirinho</h1>
-        <input id="email" type="email" placeholder="Email:">
+        <input id="email_cad" type="email" placeholder="Email:">
         <label id="ttemail" for="email">Email:</label>
 
         <input id="Telefone" type="tel" placeholder="Telefone:">
         <label id="ttTelefone" for="Telefone">Telefone:</label>
 
-        <input id="senha" type="password" placeholder="senha">
+        <input id="senha_cad" type="password" placeholder="senha">
         <label id="ttsenha" for="senha">Senha:</label>
 
         <p id="ttnascimento">Data de Nascimento: </p>
@@ -38,8 +38,9 @@
         <input type="text" name="usuario" id="usuario" placeholder="nome completo">
         <label for="usuario" id="ttusuario">Nome de usuario: </label>
 
-        <button id="cadastrar">Cadastrar</button>
-
+        <button id="cadastrar" onclick="cadastro()">Cadastrar</button>
+        <a href="index.html">Já tem um conta?</a>
     </main>
+    <script src="../scripts/script.js"></script>
 </body>
 </html> 

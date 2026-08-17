@@ -9,13 +9,13 @@ document.addEventListener('keydown', function(event) {
 })
 
 function cadastro(){
-    
+    window.location.href="index.html"
+    var email_cad = document.getElementById("email_cad")
+    var senha_cad = document.getElementById("senha_cad")
+    return email_cad
 }
 
 function entrar(){
-    if(email.value == "gabrieldonato303@gmail.com" && senha.value == "Blizz1705"){
-        window.location.href="../abas/home.html";
-    }else{
-        alert("Email ou senha invalidos")
-    }
+    email_cad = cadastro()
+    alert(email_cad)
 }

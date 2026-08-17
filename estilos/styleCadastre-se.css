@@ -27,6 +27,7 @@ main{
 main > h1{
     font-family: var(--font-padrao);
     padding: 10px;
+    color: white;
 }
 
 input::placeholder{
@@ -44,7 +45,10 @@ input{
 input::placeholder{
     visibility: hidden;
 }
-#email{
+label{
+    color: white;
+}
+#email_cad{
     position: absolute;
     top: 20%;
     left: 50%;
@@ -58,15 +62,15 @@ input::placeholder{
     transform: translate(-50%, -50%);
     opacity: 50%;
 }
-#email:focus + #ttemail{
+#email_cad:focus + #ttemail{
     transition: 0.5s;
     transform: translate(-22px, -35px);
     opacity: 100%;
 }
-#email:not(:placeholder-shown) + label{
+#email_cad:not(:placeholder-shown) + label{
     transform: translate(-25px, -35px);
 }
-#senha{
+#senha_cad{
     position: absolute;
     top: 26%;
     left: 25%;
@@ -79,12 +83,12 @@ input::placeholder{
     transform: translate(-50%, -60%);
     opacity: 50%;
 }
-#senha:focus + label{
+#senha_cad:focus + label{
     transition: 0.5s;
     transform: translate(-25px, -40px);
     opacity: 100%;
 }
-#senha:not(:placeholder-shown) + label{
+#senha_cad:not(:placeholder-shown) + label{
     transform: translate(-25px, -40px);
 }
 #Telefone{
@@ -112,6 +116,7 @@ input::placeholder{
     position: absolute;
     left: 36%;
     top: 42%;
+    color: white;
     
 }
 .data:focus + label{
@@ -214,4 +219,25 @@ input::placeholder{
     border: var(--cor4) solid  1px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px var(--cor0);
+    color: white;
+}
+#cadastrar:hover{
+    background-color: var(--cor2);
+    transition: 1s;
+}
+a{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    top: 85%;
+    left: 36%;
+    font-family: var(--font-padrao);
+    padding: 5px;
+}
+a:hover{
+    text-decoration: underline;
+    background-color: var(--cor2);
+    border-radius: 5px;
+    transition: 0.5s;
 }
