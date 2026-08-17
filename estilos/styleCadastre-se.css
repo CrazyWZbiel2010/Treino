@@ -6,7 +6,6 @@
     --cor4: #00455E;
     --font-padrao: arial, helvetica, sans-serif;
 }
-
 *{
     margin: 0;
     padding: 0;
@@ -27,6 +26,7 @@ main{
 }
 main > h1{
     font-family: var(--font-padrao);
+    padding: 10px;
 }
 
 input::placeholder{
@@ -37,21 +37,181 @@ input{
     height: 35px;
     width: 250px;
     border-radius: 20px;
-    background-color: var(--cor3);
+    background-color: transparent;
     border: 1px solid black;
     box-shadow: 0 0 15px var(--cor1); 
 }
-
+input::placeholder{
+    visibility: hidden;
+}
 #email{
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 #ttemail{
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 32%;
     transform: translate(-50%, -50%);
     opacity: 50%;
+}
+#email:focus + #ttemail{
+    transition: 0.5s;
+    transform: translate(-22px, -35px);
+    opacity: 100%;
+}
+#email:not(:placeholder-shown) + label{
+    transform: translate(-25px, -35px);
+}
+#senha{
+    position: absolute;
+    top: 26%;
+    left: 25%;
+    text-align: center;
+}
+#ttsenha{
+    position: absolute;
+    top: 29%;
+    left: 32%;
+    transform: translate(-50%, -60%);
+    opacity: 50%;
+}
+#senha:focus + label{
+    transition: 0.5s;
+    transform: translate(-25px, -40px);
+    opacity: 100%;
+}
+#senha:not(:placeholder-shown) + label{
+    transform: translate(-25px, -40px);
+}
+#Telefone{
+    position: absolute;
+    left: 25%;
+    top: 35%;
+    text-align: center;
+}
+#ttTelefone{
+    position: absolute;
+    left: 28%;
+    top: 36%;
+    transform: translate(0px, 4px);
+    opacity: 50%;
+}
+#Telefone:focus + label{
+    transition: 0.5s;
+    transform: translate(-8px, -25px);
+    opacity: 100%;
+}
+#Telefone:not(:placeholder-shown) + label{
+    transform: translate(-8px, -25px);
+}
+#ttnascimento{
+    position: absolute;
+    left: 36%;
+    top: 42%;
+    
+}
+.data:focus + label{
+    visibility: hidden;
+}
+.data:not(:placeholder-shown) + label{
+    visibility: hidden;
+}
+#dia{
+    text-align: center;
+    position: absolute;
+    width: 70px;
+    left: 25%;
+    top: 46%;
+}
+#ttdia{
+    position: absolute;
+    left: 28%;
+    top: 47%;
+    transform: translate(5px, 2px);
+    opacity: 50%;
+}
+#mes{
+    text-align: center;
+    position: absolute;
+    left: 42%;
+    top: 46%;
+    width: 70px;
+}
+#ttmes{
+    position: absolute;
+    left: 45%;
+    top: 47%;
+    transform: translate(7px, 2px);
+    opacity: 50%;
+}
+#ano{
+    text-align: center;
+    position: absolute;
+    left: 59%;
+    top: 46%;
+    width: 70px;
+}
+#ttano{
+    position: absolute;
+    top: 47%;
+    left: 62%;
+    transform: translate(7px, 2px);
+    opacity: 50%;
+}
+#nome{
+    text-align: center;
+    position: absolute;
+    left: 25%;
+    top: 56%;
+}
+#ttnome{
+    position: absolute;
+    top: 57%;
+    left: 28%;
+    transform: translate(0px, 3px);
+    opacity: 50%;
+}
+#nome:focus + label{
+    transform: translate(0px, -27px);
+    transition: 0.5s;
+    opacity: 100%;
+}
+#nome:not(:placeholder-shown) + label{
+    transform: translate(0px, -27px);
+}
+#usuario{
+    text-align: center;
+    position: absolute;
+    left: 25%;
+    top: 66%;
+}
+#usuario:focus + label{
+    transform: translate(0px, -27px);
+    transition: 0.5s;
+    opacity: 100%;
+}
+#ttusuario{
+    position: absolute;
+    top: 67%;
+    left: 28%;
+    transform: translate(0px, 3px);
+    opacity: 50%;
+}
+#usuario:not(:placeholder-shown) + label{
+    transform: translate(0px, -27px);
+}
+#cadastrar{
+    position: absolute;
+    top: 75%;
+    left: 40%;
+    width: 100px;
+    height: 50px;
+    background-color: transparent;
+    border: var(--cor4) solid  1px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px var(--cor0);
 }

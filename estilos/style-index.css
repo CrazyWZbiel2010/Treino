@@ -56,6 +56,9 @@ input:not(:placeholder-shown) + label{
   transition: 0.5s;
   opacity: 50%;
 }
+label:active{
+    
+}
 #Email:focus + label{
     transform: translate(0px, -30px);
     transition: 0.5s;
@@ -87,7 +90,6 @@ input:not(:placeholder-shown) + label{
 #senha:focus + label{
     transform: translate(0px, -35px);
     transition: 0.5s;
-    opacity: 100%;
 }
 
 button{

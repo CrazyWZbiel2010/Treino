@@ -8,6 +8,10 @@ document.addEventListener('keydown', function(event) {
     }
 })
 
+function cadastro(){
+    
+}
+
 function entrar(){
     if(email.value == "gabrieldonato303@gmail.com" && senha.value == "Blizz1705"){
         window.location.href="../abas/home.html";
