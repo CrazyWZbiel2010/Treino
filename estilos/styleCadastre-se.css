@@ -24,10 +24,11 @@ main{
     text-align: center;
     border-radius: 15px;
 }
-main > h1{
+h1{
     font-family: var(--font-padrao);
     padding: 10px;
     color: white;
+    margin-top: 50px;
 }
 
 input::placeholder{
@@ -209,28 +210,34 @@ label{
 #usuario:not(:placeholder-shown) + label{
     transform: translate(0px, -27px);
 }
+main > h3{
+    color: red;
+    margin-top: 79%;
+    visibility: hidden;
+}
 #cadastrar{
     position: absolute;
-    top: 75%;
+    top: 78%;
     left: 40%;
     width: 100px;
     height: 50px;
     background-color: transparent;
-    border: var(--cor4) solid  1px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px var(--cor0);
     color: white;
 }
+
 #cadastrar:hover{
     background-color: var(--cor2);
     transition: 1s;
 }
+
 a{
     text-align: center;
     text-decoration: none;
     color: white;
     position: absolute;
-    top: 85%;
+    top: 88%;
     left: 36%;
     font-family: var(--font-padrao);
     padding: 5px;

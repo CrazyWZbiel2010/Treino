@@ -8,6 +8,7 @@
     --cor2: #0081B0;
     --cor3: #006387;
     --cor4: #00455E;
+    --font-padrao: arial, helvetica, sans-serif;
 }
 body{
     background-color: var(--cor4);
@@ -24,7 +25,13 @@ div{
     border-radius: 15px;
     box-shadow: 1px 1px 3px var(--cor1);
 }
-
+div h1{
+    color: white;
+    text-align: center;
+    padding: 50px;
+    font-family: var(--font-padrao);
+    margin-top: 90px;
+}
 #Email{
     position: absolute;
     top: 38%;   

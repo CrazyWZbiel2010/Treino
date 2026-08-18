@@ -3,15 +3,49 @@ document.addEventListener('keydown', function(event) {
         entrar()
     }
 })
-
+function verificaEmail(email){
+     if(email.endsWith("@gmail.com")){
+        return true
+     }else{
+        return false
+     }
+}
 function cadastro(){
-    if (window.location.pathname === '/abas/Cadastre-se.html') {
-        window.location.href="index.html"
-    }
+    let Todospreenchidos = true
     var email_cad = document.getElementById("email_cad").value
     var senha_cad = document.getElementById("senha_cad").value
-    localStorage.setItem("email_salvar", email_cad)
-    localStorage.setItem("senha_salvar", senha_cad)
+    var aviso = document.getElementById('aviso')
+    var inputs = document.querySelectorAll('input')
+    for(let i = 0; i <inputs.length; i++){
+        if(inputs[i].value !== ""){
+            Todospreenchidos = true
+        }else{
+            Todospreenchidos = false
+        }
+    }
+    if(!verificaEmail(email_cad)){
+        Todospreenchidos = false   
+    }
+    if (!Todospreenchidos) {
+        aviso.style.visibility="visible"
+    }else{
+        localStorage.setItem("email_salvar", email_cad)
+        localStorage.setItem("senha_salvar", senha_cad)
+        window.location.href='../abas/index.html'
+    }
+    aviso.animate([
+            {transform: 'transalateX(1px)', opacity: 1},
+            {transform: 'transalateX(0px)', opacity: 0.5},
+            {transform: 'translateX(1px)', opacity: 1},
+            {transform: 'translateX(0px)', opacity: 0.5},
+        ], {
+            duration: 100,
+            iterations: 1
+        }
+        )
+    
+    
+
 }
 
 
