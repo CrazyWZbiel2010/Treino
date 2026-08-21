@@ -1,6 +1,16 @@
+let telefone = document.getElementById("Telefone")
+telefone.addEventListener('input', function() {
+    telefone.value = telefone.value.replace(/\D/g, "")
+})
+
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
         entrar()
+    }
+})
+document.addEventListener('keydown', function (event){
+    if (event.key === 'Enter'){
+        cadastro()
     }
 })
 function verificaEmail(email){
@@ -12,10 +22,17 @@ function verificaEmail(email){
 }
 function cadastro(){
     let Todospreenchidos = true
-    var email_cad = document.getElementById("email_cad").value
-    var senha_cad = document.getElementById("senha_cad").value
-    var aviso = document.getElementById('aviso')
-    var inputs = document.querySelectorAll('input')
+    let email_cad = document.getElementById("email_cad").value
+    let senha_cad = document.getElementById("senha_cad").value
+    let aviso = document.getElementById('aviso')
+    let inputs = document.querySelectorAll('input')
+    let telefone = document.getElementById("Telefone").value
+    let dia = document.getElementById('dia').value
+    let mes = document.getElementById('mes').value
+    let ano = document.getElementById('ano').value
+    let nome = document.getElementById('nome').value
+    let usuario = document.getElementById('usuario').value
+    
     for(let i = 0; i <inputs.length; i++){
         if(inputs[i].value !== ""){
             Todospreenchidos = true
@@ -50,10 +67,10 @@ function cadastro(){
 
 
 function entrar(){
-    var email = document.getElementById("Email")
-    var senha = document.getElementById("senha")
-    var aviso1 = document.getElementById("aviso_1ºinput")
-    var aviso2 = document.getElementById("aviso_2ºinput")
+    let email = document.getElementById("Email")
+    let senha = document.getElementById("senha")
+    let aviso1 = document.getElementById("aviso_1ºinput")
+    let aviso2 = document.getElementById("aviso_2ºinput")
     email = email.value
     senha = senha.value
     email_cad = localStorage.getItem('email_salvar')
