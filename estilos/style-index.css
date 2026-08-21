@@ -11,7 +11,7 @@
     --font-padrao: arial, helvetica, sans-serif;
 }
 body{
-    background-color: var(--cor4);
+    background-color: var(--cor0);
     height: 100vh;
 }
 div{
@@ -21,7 +21,7 @@ div{
     transform: translate(-50%, -50%);
     width: 500px;
     height: 700px;
-    background-color: var(--cor3);
+    background-color: var(--cor1);
     border-radius: 15px;
     box-shadow: 1px 1px 3px var(--cor1);
 }
@@ -63,8 +63,9 @@ input:not(:placeholder-shown) + label{
   transition: 0.5s;
   opacity: 50%;
 }
-label:active{
-    
+input{
+    border: none;
+    outline: none;
 }
 #Email:focus + label{
     transform: translate(0px, -30px);
@@ -95,7 +96,7 @@ label:active{
     font-weight: bold;
 }
 #senha:focus + label{
-    transform: translate(0px, -35px);
+    transform: translate(0px, -30px);
     transition: 0.5s;
 }
 
@@ -103,16 +104,16 @@ button{
     position: absolute;
     top: 60%;
     left: 30%;
-    background-color: var(--cor3);
+    background-color: var(--cor1);
     border: none;
     width: 200px;
     height: 30px;
     border-radius: 10px;
     color: white;
-    box-shadow: 0px 0px 20px var(--cor2);
+    box-shadow: 0px 0px 20px var(--cor0);
 }
 button:hover{
-    background-color: var(--cor2);
+    background-color: var(--cor0);
     transition: 1s;
 }
 a#Cadastre{

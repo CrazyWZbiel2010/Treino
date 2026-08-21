@@ -20,6 +20,27 @@ function verificaEmail(email){
         return false
      }
 }
+
+function verificaData(dia, mes, ano){
+    if(dia < 1 || dia > 31 || mes < 1 || mes > 12 || ano > new Date().getFullYear() || ano < 1800){
+        return false
+    }else{
+        return true
+    }
+}
+
+function verificaTelefone(telefone){
+    if(telefone.length < 11){
+        return false
+    }else{
+        return true
+    }
+}
+function esqueceuSenha(){
+    var esqueceuSenha = document.getElementById('esqueceuSenha')
+    senha = localStorage.getItem('senha_salvar')
+    esqueceuSenha.innerHTML = senha
+}
 function cadastro(){
     let Todospreenchidos = true
     let email_cad = document.getElementById("email_cad").value
@@ -42,6 +63,12 @@ function cadastro(){
     }
     if(!verificaEmail(email_cad)){
         Todospreenchidos = false   
+    }
+    if(!verificaTelefone(telefone)){
+        Todospreenchidos = false
+    }
+    if(!verificaData(dia, mes, ano)){
+        Todospreenchidos = false
     }
     if (!Todospreenchidos) {
         aviso.style.visibility="visible"

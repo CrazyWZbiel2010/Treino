@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --cor0: #00B8FC;
+    --cor1: #009FD9;
+    --cor2: #0081B0;
+    --cor3: #006387;
+    --cor4: #00455E;
+    --font-padrao: arial, helvetica, sans-serif;
+}
+body{
+    background-color: var(--cor2);
+}
+#container{
+    position: absolute;
+    width: 500px;
+    height: 700px;
+    background-color: var(--cor3);
+    border-radius: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+#container > h1{
+    border-radius: 15px 15px 0px 0px;
+}

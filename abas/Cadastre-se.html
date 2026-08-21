@@ -9,36 +9,30 @@
 <body>
     <main>
         <h1>SIGN UP</h1>
-        <input id="email_cad" type="email" placeholder="Email:">
+        <input id="email_cad" type="email" placeholder="Email:" required>
         <label id="ttemail" for="email">Email:</label>
-
-        <input id="Telefone" type="tel" placeholder="Telefone:" maxlength="11">
-        <label id="ttTelefone" for="Telefone">Telefone:</label>
-
-        <input id="senha_cad" type="password" placeholder="senha">
+        <input id="senha_cad" type="password" placeholder="senha" required>
         <label id="ttsenha" for="senha">Senha:</label>
-
+        <input id="Telefone" type="tel" placeholder="Telefone:" maxlength="11" required>
+        <label id="ttTelefone" for="Telefone">Telefone:</label>
+            
         <p id="ttnascimento">Data de Nascimento: </p>
-        
-        <input type="text" maxlength="2" min="1" id="dia" class="data" placeholder="dia" >
+            
+        <input type="number" max="31" min="1" id="dia" class="data" placeholder="dia" required>
         <label id="ttdia" for="dia" class="ttdata">Dia</label>
-        
-        <input type="number" max="12" id="mes" class="data" placeholder="mes" >
+            
+        <input type="number" max="12" min="1" id="mes" class="data" placeholder="mes" required>
         <label id="ttmes" for="mes" class="ttdata">Mes</label>
-
-
-        <input type="number" name="ano" id="ano" class="data" placeholder="ano">
+        <input type="number" name="ano" id="ano" class="data" placeholder="ano" required>
         <label id="ttano" for="ano" class="ttdata">Ano</label>
-
-        
-        <input type="text" name="Nome" id="nome" placeholder="nome completo">
+            
+        <input type="text" name="Nome" id="nome" placeholder="nome completo" required>
         <label id="ttnome" for="nome">Nome completo: </label>
-
-        
-        <input type="text" name="usuario" id="usuario" placeholder="nome completo">
+            
+        <input type="text" name="usuario" id="usuario" placeholder="nome completo" required>
         <label for="usuario" id="ttusuario">Nome de usuario: </label>
         <h3 id="aviso">&#x26A0 Algo não está certo!</h3>
-        <button id="cadastrar" onclick="cadastro()">Cadastrar</button>
+        <button id="cadastrar" onclick= "cadastro()" type="submit"> Cadastrar</button>
         <a href="index.html">Já tem um conta?</a>
     </main>
     <script src="../scripts/script.js"></script>
