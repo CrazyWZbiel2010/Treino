@@ -10,17 +10,17 @@
 <body>
     <div>
         <h1>SIGN-IN</h1>
-        <form action="" method="">
-            <input type="email" id="Email" placeholder="email" required>
+        <form action="verificar.php" method="POST">
+            <input type="email" id="Email" placeholder="email" required name='email'>
             <label for="Email" id="ttemail">Email: </label>
             <p id="aviso_1ºinput" class="aviso">&#x26A0 Email ou senha incorretos!</p>
-            <input type="password" id="senha" placeholder="Senha" required>
+            <input type="password" id="senha" placeholder="Senha" required name='senha'>
             <label for="senha" id="ttsenha">Senha: </label>
             <p id="aviso_2ºinput" class="aviso">&#x26A0 Email ou senha incorretos!</p>
             <button onclick="entrar()">Entrar</button>
-            <a href="Cadastre-se.html" id="Cadastre">Cadastre-se</a>
-            <a href="EsqueceuSenha.html" id="esqueceuSenha">Esqueceu a senha?</a>
         </form>
+        <a href="Cadastre-se.php" id="Cadastre">Cadastre-se</a>
+        <a href="EsqueceuSenha.php" id="esqueceuSenha">Esqueceu a senha?</a>
     </div>
     <script src="../scripts/script.js"></script>
 </body>

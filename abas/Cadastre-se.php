@@ -10,7 +10,7 @@
     <main>
         <h1>SIGN UP</h1>
         <form action="atualizar.php" method="POST">
-            <input id="email_cad" type="email" placeholder="Email:" required>
+            <input id="email_cad" type="email" placeholder="Email:" required name='email'>
             <label id="ttemail" for="email">Email:</label>
             <input id="senha_cad" type="password" placeholder="senha" name='senha' required>
             <label id="ttsenha" for="senha">Senha:</label>
@@ -32,10 +32,11 @@
             
             <input type="text" name="usuario" id="usuario" placeholder="nome completo" required>
             <label for="usuario" id="ttusuario">Nome de usuario: </label>
-            <h3 id="aviso">&#x26A0 Algo não está certo!</h3>
-            <button id="cadastrar" onclick= "cadastro()" type="submit"> Cadastrar</button>
+            
+            <button id="cadastrar" type="submit"> Cadastrar</button>
         </form>
-        <a href="index.html">Já tem um conta?</a>
+        <h3 id="aviso">&#x26A0 Algo não está certo!</h3>
+        <a href="index.php">Já tem um conta?</a>
     </main>
     <script src="../scripts/script.js"></script>
 </body>
